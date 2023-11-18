@@ -6,9 +6,14 @@ chart:
   name: onechart
   version: 0.57.0
 values:
+  containerPort: 80
   gitRepository: laszlocph/expressjs-test-app
   gitSha: '{{ .SHA }}'
+  image:
+    repository: nginx
+    tag: 1.19.4
   ingress:
     host: alma.gimlet.io
+  replicas: 1
   resources:
     ignoreLimits: true
