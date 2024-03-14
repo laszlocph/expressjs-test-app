@@ -15,6 +15,6 @@ values:
     tag: '{{ .SHA }}'
   imagePullSecrets:
     - ghcr-registry-secret
-  replicas: 3
+  replicas: 1
   resources:
     ignoreLimits: true
