@@ -1,6 +1,6 @@
 app: expressjs-test-app-buildpacks
 env: optimal-snow
-namespace: default
+namespace: defaultwfewf
 chart:
   name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
 values:
