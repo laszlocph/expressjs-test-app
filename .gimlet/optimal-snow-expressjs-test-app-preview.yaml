@@ -1,0 +1,19 @@
+app: expressjs-test-app-preview
+env: optimal-snow
+namespace: default
+chart:
+  name: ""
+values:
+  gitRepository: laszlocph/expressjs-test-app
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: builtInRegistry
+    repository: 127.0.0.1:32447/expressjs-test-app-preview
+    strategy: buildpacks
+    tag: '{{ .SHA }}'
+  ingress:
+    annotations: {}
+    host: expressjs-test-app-preview.gimlet.app
+    tlsEnabled: false
+  resources:
+    ignoreLimits: true
