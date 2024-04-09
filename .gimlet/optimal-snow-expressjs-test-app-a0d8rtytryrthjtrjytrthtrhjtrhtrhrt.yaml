@@ -1,0 +1,15 @@
+app: expressjs-test-app-a0d8rtytryrthjtrjytrthtrhjtrhtrhrt
+env: optimal-snow
+namespace: default
+chart:
+  name: ""
+values:
+  gitRepository: laszlocph/expressjs-test-app
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: builtInRegistry
+    repository: 127.0.0.1:32447/expressjs-test-app-a0d8
+    strategy: buildpacks
+    tag: '{{ .SHA }}'
+  resources:
+    ignoreLimits: true
