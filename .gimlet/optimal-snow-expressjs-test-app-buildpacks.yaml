@@ -9,10 +9,12 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
-    repository: 127.0.0.1:32447/{{ .APP }}
+    registry: ghcrRegistry
+    repository: ghcr.io/laszlocph/{{ .APP }}
+    strategy: dockerfile
     tag: '{{ .SHA }}'
   imagePullSecrets:
-    - ghcr-registry-pullsecret
+    - expressjs-test-app-buildpacks-ghcrregistry-pullsecret
   replicas: 3
   resources:
     ignoreLimits: true
