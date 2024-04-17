@@ -12,11 +12,10 @@ values:
   gitRepository: laszlocph/expressjs-test-app
   gitSha: '{{ .SHA }}'
   image:
-    dockerfile: Dockerfile
-    registry: ghcrRegistry
-    repository: ghcr.io/laszlocph/{{ .APP }}
-    strategy: dockerfile
-    tag: '{{ .SHA }}'
+    registry: builtInRegistry
+    repository: nginx
+    strategy: static
+    tag: 1.19.3
   imagePullSecrets:
     - expressjs-test-app-ghcrregistry-pullsecret
   issues: ""
