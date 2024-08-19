@@ -23,3 +23,5 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
+  vars:
+    newKeyhg: New Value
