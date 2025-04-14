@@ -1,0 +1,18 @@
+app: expressjs-test-appqwrfwe
+env: optimal-snow
+namespace: default
+chart:
+  name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
+values:
+  containerPort: 80
+  gitRepository: laszlocph/expressjs-test-app
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: builtInRegistry
+    repository: nginx
+    strategy: static
+    tag: 1.19.3
+  replicas: 1
+  resources:
+    ignoreLimits: true
+  vars: {}
